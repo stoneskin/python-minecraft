@@ -145,30 +145,31 @@ class CmdEntity(CmdPositioner):
 
 class CmdPlayer(CmdPositioner):
     """Methods for the host (Raspberry Pi) player"""
-    def __init__(self, connection):
-        CmdPositioner.__init__(self, connection, b"player")
+    def __init__(self, connection,playerId):
+        CmdPositioner.__init__(self, connection,  b"player")
         self.conn = connection
+        self.playerId=playerId
 
     def getPos(self):
-        return CmdPositioner.getPos(self, [])
+        return CmdPositioner.getPos(self, self.playerId)
     def setPos(self, *args):
-        return CmdPositioner.setPos(self, [], args)
+        return CmdPositioner.setPos(self, self.playerId, args)
     def getTilePos(self):
-        return CmdPositioner.getTilePos(self, [])
+        return CmdPositioner.getTilePos(self, self.playerId)
     def setTilePos(self, *args):
-        return CmdPositioner.setTilePos(self, [], args)
+        return CmdPositioner.setTilePos(self, self.playerId, args)
     def setDirection(self, *args):
-        return CmdPositioner.setDirection(self, [], args)
+        return CmdPositioner.setDirection(self, self.playerId, args)
     def getDirection(self):
-        return CmdPositioner.getDirection(self, [])
+        return CmdPositioner.getDirection(self, self.playerId)
     def setRotation(self, yaw):
-        return CmdPositioner.setRotation(self, [], yaw)
+        return CmdPositioner.setRotation(self,self.playerId, yaw)
     def getRotation(self):
-        return CmdPositioner.getRotation(self, [])
+        return CmdPositioner.getRotation(self, self.playerId)
     def setPitch(self, pitch):
-        return CmdPositioner.setPitch(self, [], pitch)
+        return CmdPositioner.setPitch(self, self.playerId, pitch)
     def getPitch(self):
-        return CmdPositioner.getPitch(self, [])
+        return CmdPositioner.getPitch(self, self.playerId)
 
     def getEntities(self, distance=10, typeId=-1):
         """Return a list of entities near entity (distanceFromPlayerInBlocks:int, typeId:int) => [[entityId:int,entityTypeId:int,entityTypeName:str,posX:float,posY:float,posZ:float]]"""
@@ -213,6 +214,16 @@ class CmdPlayer(CmdPositioner):
     def clearEvents(self):
         """Clear the players events"""
         self.conn.send(b"player.events.clear")
+
+class CmdPlayerEntity(CmdPlayer):
+    """ use entity to build a player """
+    def __init__(self, connection,playerId):
+        CmdPositioner.__init__(self, connection,  b"entity")
+        self.conn = connection
+        self.playerId=playerId
+        
+    def getPos(self):
+            return CmdPositioner.getPos(self, self.playerId)
 
 class CmdCamera:
     def __init__(self, connection):
@@ -274,13 +285,15 @@ class CmdEvents:
 
 class Minecraft:
     """The main class to interact with a running instance of Minecraft Pi."""
-    def __init__(self, connection):
+    def __init__(self, connection,playerId):
         self.conn = connection
-
+       
         self.camera = CmdCamera(connection)
         self.entity = CmdEntity(connection)
-        self.player = CmdPlayer(connection)
+        self.player = CmdPlayer(connection,playerId)
+        self.playerEn=CmdPlayerEntity(connection,playerId)
         self.events = CmdEvents(connection)
+        self.playerId= playerId
 
     def getBlock(self, *args):
         """Get block (x,y,z) => id:int"""
@@ -372,8 +385,14 @@ class Minecraft:
         return int(self.conn.sendReceive(b"world.removeEntities", typeId))
 
     @staticmethod
-    def create(address = "localhost", port = 4711):
-        return Minecraft(Connection(address, port))
+    def create(address = "localhost", port = 4711,playerName=""):
+        conn=Connection(address, port)
+        playerId=[]
+        if playerName!="":
+           playerId= int(conn.sendReceive(b"world.getPlayerId", playerName))
+           print("get {} playerid={}".format(playerName, playerId))
+
+        return Minecraft(conn,playerId)
 
 
 if __name__ == "__main__":
