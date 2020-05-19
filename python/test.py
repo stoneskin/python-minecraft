@@ -9,3 +9,5 @@ pos2=mc.playerEn.getPos()
 
 print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
 print("pos2: x:{},y:{},z:{}".format(pos2.x,pos2.y,pos2.z))
+
+#test
