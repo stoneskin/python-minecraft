@@ -290,8 +290,8 @@ class Minecraft:
        
         self.camera = CmdCamera(connection)
         self.entity = CmdEntity(connection)
-        self.player = CmdPlayer(connection,playerId)
-        self.playerEn=CmdPlayerEntity(connection,playerId)
+        self.cmdplayer = CmdPlayer(connection,playerId)
+        self.player=CmdPlayerEntity(connection,playerId)
         self.events = CmdEvents(connection)
         self.playerId= playerId
 
