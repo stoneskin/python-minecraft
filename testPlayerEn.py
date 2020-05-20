@@ -15,3 +15,4 @@ posT=mc.player.getTilePos()
 posT2=mc.cmdplayer.getTilePos()
 print("posTile: x:{},y:{},z:{}".format(posT.x,posT.y,posT.z))
 #print("posTile2: x:{},y:{},z:{}".format(posT2.x,posT2.y,posT2.z))
+

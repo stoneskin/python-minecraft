@@ -5,6 +5,7 @@ from .entity import Entity
 from .block import Block
 import math
 from .util import flatten
+import sys
 
 """ Minecraft PI low level api v0.1_1
 
@@ -386,6 +387,7 @@ class Minecraft:
 
     @staticmethod
     def create(address = "localhost", port = 4711,playerName=""):
+        print("Running Python version:"+sys.version)
         conn=Connection(address, port)
         playerId=[]
         if playerName!="":
