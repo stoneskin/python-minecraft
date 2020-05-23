@@ -1,4 +1,4 @@
-from mcpi.minecraft import Minecraft # this need install mcpi into global package
+from mcpi_e.minecraft import Minecraft # this need install mcpi into global package
 
 address="100.19.142.129" 
 port=4711 #default port for RaspberryJuice plugin is 4711, it could be changed in plugins\RaspberryJuice\config.yml
