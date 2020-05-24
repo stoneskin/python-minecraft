@@ -35,7 +35,7 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 1. Connect to Minecraft server and get your position
 
-   >[sample1.py](/python/Sample1.py)
+   >[sample1.py](./0.1-Sample1.py)
 
 ```python
    from mcpi_e.minecraft import Minecraft
@@ -98,8 +98,8 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 3 Drop the flower when you move!
 
->[code example 1](python/Sample2_WolkingWithFlower.py)
->[code example 2](python/Sample2_WolkingWithFlower2.py)
+>[code example 1](./0.2-WolkingWithFlower.py)
+>[code example 2](./0.3-WolkingWithFlower_useMoudle.py)
 
 ```Python
    flower = 38
