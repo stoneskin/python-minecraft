@@ -17,13 +17,15 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### window
 
-* ```bash
+* use pip3
+  
+  ``` bash
   pip3 install mcpi-e
   ```
 
 * or
   
-  ```bash
+  ``` bash
   py -m pip install mcpi-e
   ```
 
@@ -54,14 +56,14 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.1 Find your location
 
-```Python
+```python
    pos=mc.player.getTilePos()
 
 ```
 
 #### 2.2 Teleport
 
-```Python
+```python
    #move player to north 100 block
    x,y,z=pos=mc.player.getTilePos()
    mc.player.setTilePos(x,y+100,z)
@@ -69,20 +71,20 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.3 Set block
 
-```Python
+```python
    #set the a stone block beside the player
    x,y,z=pos=mc.player.getTilePos()
    mc.setBlock(x+1, y, z, 1)
 ```
 
-```Python
+```python
    #setblock with constants block.STONE.id
    from mcpi_e import block
    (x,y,z) = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z+1, block.STONE.id)
 ```
 
-```Python
+```python
    # set special block which extra properties
    flower = 38
    flowerColor = 3
@@ -91,7 +93,7 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.4 Get block
 
-```Python
+```python
    # get the block current player step on
    x, y, z = mc.player.getTilePos()
    blockId= mc.getBlock(x, y, z)
@@ -104,7 +106,7 @@ Introductions and Python Code example for kids to learn python programming with 
 * code example 1: [dropflower.py](./samples/dropflower.py), 
 * code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
 
-```Python
+```python
    #Set a random flower on where the plaer step on
    flower = 38
    while True:
