@@ -1,8 +1,8 @@
 from mcpi_e.minecraft import Minecraft
 #change to your mincraft server ip address,  default port 25565, if  you tset from your local it will be localhost 
-address="100.19.142.129" 
+address="127.0.0.1" 
 port=4711 #default port for RaspberryJuice plugin is 4711, it could be changed in plugins\RaspberryJuice\config.yml
-playerName="stoneskinkknn" # change to your username
+playerName="your name" # change to your username
 mc = Minecraft.create(address,port,playerName)
 pos = mc.player.getPos()
 pos2=mc.cmdplayer.getPos()

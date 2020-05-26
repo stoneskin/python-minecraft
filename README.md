@@ -98,8 +98,8 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 3 Drop the flower when you move!
 
->[code example 1](./0.2-WolkingWithFlower.py)
->[code example 2](./0.3-WolkingWithFlower_useMoudle.py)
+>code example 1: [dropflower.py](./samples/dropflower.py)
+>code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
 
 ```Python
    flower = 38
@@ -111,3 +111,31 @@ Introductions and Python Code example for kids to learn python programming with 
          mc.setBlock(x, y, z, flower,randrange(8))
       sleep(0.2)
 ```
+
+![alt python-minecraft](./documents/dropflowers.png)
+
+### 4 Build a rainbow in the minecraft
+
+>code example 3: [rainbow.py](./samples/rainbow.py)
+
+```python
+   import mcpi_e.minecraft as minecraft
+   import mcpi_e.block as block
+   from math import *
+
+   address="127.0.0.1" # change to your minecraft server
+   name ="change you your name"
+   mc = minecraft.Minecraft.create(address,4711,name)
+   playerPos=mc.player.getTilePos()
+   colors = [14, 1, 4, 5, 3, 11, 10]
+   height=50
+
+   for x in range(0, 128):
+         for colourindex in range(0, len(colors)):
+                  y = playerPos.y+sin((x / 128.0) * pi) * height + colourindex
+                  mc.setBlock(playerPos.x+x - 64,  int(y), playerPos.z, block.WOOL.id, colors[len(colors) - 1 - colourindex])
+   print("rainbow created at x:{} y:{} z:{}".format(playerPos.x,playerPos.y,playerPos.z))
+
+```
+
+![alt python-minecraft](./documents/rainbow.png)

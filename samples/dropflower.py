@@ -2,9 +2,9 @@ from mcpi_e.minecraft import Minecraft
 from mcpi_e import block
 from time import sleep
 from random import *
-from _settings import * 
 
-def walkingWithFlower(mc):
+
+def dropFlower(mc):
     flower = 38
 
     while True:
@@ -17,6 +17,9 @@ def walkingWithFlower(mc):
         sleep(0.2)
 
 
-#address port, and playerName comefrom in _settings.py        
+serverAddress="127.0.0.1" # change to your minecraft server
+playerName ="yourname"
+pythonApiPort=4711
+     
 mc=Minecraft.create(serverAddress,pythonApiPort,playerName)        
-walkingWithFlower(mc)
+dropFlower(mc)
