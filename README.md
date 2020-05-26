@@ -40,7 +40,7 @@ Introductions and Python Code example for kids to learn python programming with 
 ```python
    from mcpi_e.minecraft import Minecraft
 
-   serverAddress="127.0.0.1:25565 " # change to your minecraft server
+   serverAddress="127.0.0.1" # change to your minecraft server
    pythonApiPort=4711 #default port for RaspberryJuice plugin is 4711, it could be changed in plugins\RaspberryJuice\config.yml
    playerName="stoneskin" # change to your username
 
@@ -62,6 +62,7 @@ Introductions and Python Code example for kids to learn python programming with 
 #### 2.2 Teleport
 
 ```Python
+   #move player to north 100 block
    x,y,z=pos=mc.player.getTilePos()
    mc.player.setTilePos(x,y+100,z)
 ```
@@ -69,12 +70,13 @@ Introductions and Python Code example for kids to learn python programming with 
 #### 2.3 Set block
 
 ```Python
+   #set the a stone block beside the player
    x,y,z=pos=mc.player.getTilePos()
    mc.setBlock(x+1, y, z, 1)
 ```
 
 ```Python
-   #setblock with constants
+   #setblock with constants block.STONE.id
    from mcpi_e import block
    (x,y,z) = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z+1, block.STONE.id)
@@ -90,7 +92,8 @@ Introductions and Python Code example for kids to learn python programming with 
 #### 2.4 Get block
 
 ```Python
-   x, y, z = mc.player.getPos()
+   # get the block current player step on
+   x, y, z = mc.player.getTilePos()
    blockId= mc.getBlock(x, y, z)
    if(blockId == 0):
       print("current block is Air")
@@ -98,15 +101,16 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 3 Drop the flower when you move!
 
->code example 1: [dropflower.py](./samples/dropflower.py)
->code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
+* code example 1: [dropflower.py](./samples/dropflower.py), 
+* code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
 
 ```Python
+   #Set a random flower on where the plaer step on
    flower = 38
    while True:
       x, y, z = mc.playerEn.getPos()
       blockId= mc.getBlock(x, y, z)
-      print("" + str(mc.getBlock(x, y, z)))
+      print("current block:" + str(mc.getBlock(x, y, z)))
       if(blockId==0 or blockId ==78):
          mc.setBlock(x, y, z, flower,randrange(8))
       sleep(0.2)
@@ -119,6 +123,7 @@ Introductions and Python Code example for kids to learn python programming with 
 >code example 3: [rainbow.py](./samples/rainbow.py)
 
 ```python
+   # build a rainbow with color wool on the player'slocation
    import mcpi_e.minecraft as minecraft
    import mcpi_e.block as block
    from math import *
