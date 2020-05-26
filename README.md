@@ -19,13 +19,13 @@ Introductions and Python Code example for kids to learn python programming with 
 
 * use pip3
   
-  ``` bash
+  ```bash
   pip3 install mcpi-e
   ```
 
 * or
   
-  ``` bash
+  ```bash
   py -m pip install mcpi-e
   ```
 
@@ -56,26 +56,31 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.1 Find your location
 
+> get the tile position
+
 ```python
-   pos=mc.player.getTilePos()
+   pos = mc.player.getTilePos()
 
 ```
 
 #### 2.2 Teleport
+> move player to north 100 block
 
 ```python
-   #move player to north 100 block
    x,y,z=pos=mc.player.getTilePos()
    mc.player.setTilePos(x,y+100,z)
 ```
 
 #### 2.3 Set block
 
+>set the a stone block beside the player
+
 ```python
-   #set the a stone block beside the player
    x,y,z=pos=mc.player.getTilePos()
    mc.setBlock(x+1, y, z, 1)
 ```
+
+>setblock with constants block.STONE.id
 
 ```python
    #setblock with constants block.STONE.id
@@ -83,6 +88,8 @@ Introductions and Python Code example for kids to learn python programming with 
    (x,y,z) = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z+1, block.STONE.id)
 ```
+
+>set special block which extra properties
 
 ```python
    # set special block which extra properties
@@ -93,6 +100,8 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.4 Get block
 
+>get the block current player step on
+
 ```python
    # get the block current player step on
    x, y, z = mc.player.getTilePos()
@@ -101,13 +110,14 @@ Introductions and Python Code example for kids to learn python programming with 
       print("current block is Air")
 ```
 
-### 3 Drop the flower when you move!
+### 3 Drop the flower when you move
 
 * code example 1: [dropflower.py](./samples/dropflower.py), 
 * code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
 
+>Set a random flower on where the plaer step on
+
 ```python
-   #Set a random flower on where the plaer step on
    flower = 38
    while True:
       x, y, z = mc.playerEn.getPos()
@@ -122,10 +132,10 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 4 Build a rainbow in the minecraft
 
->code example 3: [rainbow.py](./samples/rainbow.py)
+>code example: [rainbow.py](./samples/rainbow.py)
+>build a rainbow with color wool on the player'slocation
 
 ```python
-   # build a rainbow with color wool on the player'slocation
    import mcpi_e.minecraft as minecraft
    import mcpi_e.block as block
    from math import *
