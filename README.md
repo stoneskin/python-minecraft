@@ -2,28 +2,31 @@
 
 Introductions and Python Code example for kids to learn python programming with minecraft.   The code will running  with modified MCPI (Pi edition API Python Library), and a spigot build mincraft server with  RaspberryJuice plugin installed.
 
-**Our goal is to learn programming while having fun in Minecraft**
+> **Our goal is to learn programming while having fun in Minecraft**
 
 ![alt python-minecraft](./documents/ProgrammingWithMineCraftPython.png)
 
 ## Prerequest
 
-### setup mincraft server
+### Setup mincraft server
 
-* spigot build of mincraft server  
-* RaspberryJuice plugin installed in server
+- **[How to setup spigot mincraft server](./documents/1_SetUpMineCraftServer/1.1_HowToSetUpMineCraftServer.md)**
+  
+- **[How to enablue Python on Minecraft server by install RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
 
 ### install mcip Python module
 
 #### window
 
-* use pip3
+>*input below scrit in the command line. (from start, search "cmd")*
+
+- use `pip3`
   
   ```bash
   pip3 install mcpi-e
   ```
 
-* or
+- or use `py` or `python -m`
   
   ```bash
   py -m pip install mcpi-e
@@ -31,7 +34,7 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### linux / MacOS
 
-* sudo pip3 install mcpi-e
+- sudo pip3 install mcpi-e
 
 ## Code Samples
 
@@ -64,10 +67,11 @@ Introductions and Python Code example for kids to learn python programming with 
 ```
 
 #### 2.2 Teleport
+
 > move player to north 100 block
 
 ```python
-   x,y,z=pos=mc.player.getTilePos()
+   x,y,z = pos = mc.player.getTilePos()
    mc.player.setTilePos(x,y+100,z)
 ```
 
@@ -76,7 +80,7 @@ Introductions and Python Code example for kids to learn python programming with 
 >set the a stone block beside the player
 
 ```python
-   x,y,z=pos=mc.player.getTilePos()
+   x,y,z = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z, 1)
 ```
 
