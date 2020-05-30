@@ -116,8 +116,8 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 3 Drop the flower when you move
 
-* code example 1: [dropflower.py](./samples/dropflower.py), 
-* code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
+- code example 1: [dropflower.py](./samples/dropflower.py)
+- code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
 
 >Set a random flower on where the plaer step on
 
@@ -160,3 +160,10 @@ Introductions and Python Code example for kids to learn python programming with 
 ```
 
 ![alt python-minecraft](./documents/rainbow.png)
+
+## Learn Python With MineCraft
+
+### 1 understand the coordinates of minecraft
+
+Minecraft coordinates is different than what we learn from geomestry. you need keep below picture in mind when you do the minecraft codeing.
+![coordinates of minecraft](./documents/minecraft_Coordinates.png)
