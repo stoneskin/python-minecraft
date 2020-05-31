@@ -163,7 +163,58 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ## Learn Python With MineCraft
 
-### 1 understand the coordinates of minecraft
+### 1 [Understand the coordinates of minecraft](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md)
 
 Minecraft coordinates is different than what we learn from geomestry. you need keep below picture in mind when you do the minecraft codeing.
 ![coordinates of minecraft](./documents/minecraft_Coordinates.png)
+
+For basic python syntax, pleas check [Python syntax](https://www.w3schools.com/python/python_syntax.asp) for details.
+Below mission will use `print` and command from minecraft api `mcpi`
+
+#### To use below code example, please make sure use below code before the sample code.
+
+```python
+import mcpi_e.minecraft as minecraft
+import mcpi_e.block as block
+from math import *
+
+address="127.0.0.1" # change to address of your minecraft server
+name ="change you your name"
+mc = minecraft.Minecraft.create(address,4711,name)
+pos=mc.player.getTilePos()
+```
+
+#### - [[Mission-1.1] find your location](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#)
+
+
+#### - [Mission-1.2] find the block type id of the block you stand on.
+
+
+#### - [Mission-1.3] Teleport you to a exactly position
+
+
+#### - [Mission-1.4] Teleport you to one direction with 100 blocks
+
+
+#### - [Mission-1.5] Place a block on your location
+
+
+### 2 Use `for` Loop to stack blocks
+
+
+#### - [Mission-2.1]Stack 5 blocks without loop
+
+
+#### - [Mission-2.2] Stack 5 blocks using For loop
+
+
+#### - [Mission-2.3] Build a 5X5 wall
+
+#### - [Mission-2.4] Build a 5x5x5 Cube
+
+#### - [Challenge] [Mission-2.5] Build a 10x10X10 pyramid in minecraft
+
+
+### 3 Use Condition `if...else`
+
+
