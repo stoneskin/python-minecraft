@@ -153,3 +153,5 @@ please show you work to me.
 ## 3 Use Condition `if...else`
 
 To learn comdition please check [Python If...Else](https://www.w3schools.com/python/python_conditions.asp)
+
+todo...
