@@ -2,36 +2,39 @@
 
 Introductions and Python Code example for kids to learn python programming with minecraft.   The code will running  with modified MCPI (Pi edition API Python Library), and a spigot build mincraft server with  RaspberryJuice plugin installed.
 
-**Our goal is to learn programming while having fun in Minecraft**
+> **Our goal is to learn programming while having fun in Minecraft**
 
 ![alt python-minecraft](./documents/ProgrammingWithMineCraftPython.png)
 
 ## Prerequest
 
-### setup mincraft server
+### Setup mincraft server
 
-* spigot build of mincraft server  
-* RaspberryJuice plugin installed in server
+- **[How to setup spigot mincraft server](./documents/1_SetUpMineCraftServer/1.1_HowToSetUpMineCraftServer.md)**
+  
+- **[How to enablue Python on Minecraft server by install RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
 
 ### install mcip Python module
 
 #### window
 
-* use pip3
+>*input below scrit in the command line. (from start, search "cmd")*
+
+- use `pip3`
   
-  ``` bash
+  ```bash
   pip3 install mcpi-e
   ```
 
-* or
+- or use `py` or `python -m`
   
-  ``` bash
+  ```bash
   py -m pip install mcpi-e
   ```
 
 #### linux / MacOS
 
-* sudo pip3 install mcpi-e
+- sudo pip3 install mcpi-e
 
 ## Code Samples
 
@@ -56,26 +59,32 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.1 Find your location
 
+> get the tile position
+
 ```python
-   pos=mc.player.getTilePos()
+   pos = mc.player.getTilePos()
 
 ```
 
 #### 2.2 Teleport
 
+> move player to north 100 block
+
 ```python
-   #move player to north 100 block
-   x,y,z=pos=mc.player.getTilePos()
+   x,y,z = pos = mc.player.getTilePos()
    mc.player.setTilePos(x,y+100,z)
 ```
 
 #### 2.3 Set block
 
+>set the a stone block beside the player
+
 ```python
-   #set the a stone block beside the player
-   x,y,z=pos=mc.player.getTilePos()
+   x,y,z = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z, 1)
 ```
+
+>setblock with constants block.STONE.id
 
 ```python
    #setblock with constants block.STONE.id
@@ -83,6 +92,8 @@ Introductions and Python Code example for kids to learn python programming with 
    (x,y,z) = pos = mc.player.getTilePos()
    mc.setBlock(x+1, y, z+1, block.STONE.id)
 ```
+
+>set special block which extra properties
 
 ```python
    # set special block which extra properties
@@ -93,6 +104,8 @@ Introductions and Python Code example for kids to learn python programming with 
 
 #### 2.4 Get block
 
+>get the block current player step on
+
 ```python
    # get the block current player step on
    x, y, z = mc.player.getTilePos()
@@ -101,13 +114,14 @@ Introductions and Python Code example for kids to learn python programming with 
       print("current block is Air")
 ```
 
-### 3 Drop the flower when you move!
+### 3 Drop the flower when you move
 
-* code example 1: [dropflower.py](./samples/dropflower.py), 
-* code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
+- code example 1: [dropflower.py](./samples/dropflower.py)
+- code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
+
+>Set a random flower on where the plaer step on
 
 ```python
-   #Set a random flower on where the plaer step on
    flower = 38
    while True:
       x, y, z = mc.playerEn.getPos()
@@ -122,10 +136,10 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ### 4 Build a rainbow in the minecraft
 
->code example 3: [rainbow.py](./samples/rainbow.py)
+>code example: [rainbow.py](./samples/rainbow.py)
+>build a rainbow with color wool on the player'slocation
 
 ```python
-   # build a rainbow with color wool on the player'slocation
    import mcpi_e.minecraft as minecraft
    import mcpi_e.block as block
    from math import *
@@ -146,3 +160,54 @@ Introductions and Python Code example for kids to learn python programming with 
 ```
 
 ![alt python-minecraft](./documents/rainbow.png)
+
+## Learn Python With MineCraft
+
+### 1 [Understand the coordinates of minecraft](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md)
+
+Minecraft coordinates is different than what we learn from geomestry. you need keep below picture in mind when you do the minecraft codeing.
+![coordinates of minecraft](./documents/minecraft_Coordinates.png)
+
+For basic python syntax, pleas check [Python syntax](https://www.w3schools.com/python/python_syntax.asp) for details.
+Below mission will use `print` and command from minecraft api `mcpi`
+
+#### To use below code example, please make sure use below code before the sample code.
+
+```python
+import mcpi_e.minecraft as minecraft
+import mcpi_e.block as block
+from math import *
+
+address="127.0.0.1" # change to address of your minecraft server
+name ="change you your name"
+mc = minecraft.Minecraft.create(address,4711,name)
+pos=mc.player.getTilePos()
+```
+
+#### - [[Mission-1.1] find your location](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-11-find-your-location)
+
+#### - [[Mission-1.2] find the block type id of the block you stand on](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-12-find-the-block-type-id-of-the-block-you-stand-on)
+
+#### - [[Mission-1.3] Teleport you to a exactly position](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-13-teleport-you-to-a-exactly-position)
+
+#### - [[Mission-1.4] Teleport you to one direction with 100 blocks](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
+
+#### - [[Mission-1.5] Place a block on your location](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-15-place-a-block-on-your-location)
+
+### 2 [Use `for` Loop to stack blocks](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#2-use-for-loop-to-stack-blocks)
+
+#### - [[Mission-2.1]Stack 5 blocks without loop](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-21stack-5-blocks-without-loop)
+
+#### - [[Mission-2.2] Stack 5 blocks using For loop](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-22-stack-5-blocks-using-for-loop)
+
+
+#### - [[Mission-2.3] Build a 5X5 wall](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-23-build-a-5x5-wall)
+
+#### - [[Mission-2.4] Build a 5x5x5 Cube](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-24-build-a-5x5x5-cube)
+
+#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in minecraft](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
+
+### 3 [Use Condition `if...else`](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#3-use-condition-ifelse)
+
+todo
+
