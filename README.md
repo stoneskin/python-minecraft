@@ -1,18 +1,18 @@
 # python-minecraft
 
-Introductions and Python Code example for kids to learn python programming with minecraft.   The code will running  with modified MCPI (Pi edition API Python Library), and a spigot build mincraft server with  RaspberryJuice plugin installed.
+Introductions and Python Code examples for kids to learn python programming with minecraft.  The Python code will run  with a modified MCPI (Pi edition API Python Library) call `mcpi-e`, and a mincraft server call spigot with the  RaspberryJuice plugin installed.
 
 > **Our goal is to learn programming while having fun in Minecraft**
 
 ![alt python-minecraft](./documents/ProgrammingWithMineCraftPython.png)
 
-## Prerequest
+## Pre-Request
 
 ### Setup mincraft server
 
-- **[How to setup spigot mincraft server](./documents/1_SetUpMineCraftServer/1.1_HowToSetUpMineCraftServer.md)**
+- **[How to setup the mincraft server (spigot)](./documents/1_SetUpMineCraftServer/1.1_HowToSetUpMineCraftServer.md)**
   
-- **[How to enablue Python on Minecraft server by install RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
+- **[How to enable Python on the Minecraft server by install the RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
 
 ### install mcip Python module
 
@@ -163,7 +163,7 @@ Introductions and Python Code example for kids to learn python programming with 
 
 ## Learn Python With MineCraft
 
-### 1 [Understand the coordinates of minecraft](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md)
+### 1 [Understand the coordinates of minecraft](./documents/2_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md)
 
 Minecraft coordinates is different than what we learn from geomestry. you need keep below picture in mind when you do the minecraft codeing.
 ![coordinates of minecraft](./documents/minecraft_Coordinates.png)
