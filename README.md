@@ -14,9 +14,9 @@
   
 - **[How to enable Python on the Minecraft server by installing the RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
 
-### install mcip Python module
+### Install mcip Python module
 
-#### window
+#### Window
 
 >*input below script in the command line. (from start, search "cmd")*
 
@@ -32,7 +32,7 @@
   py -m pip install mcpi-e
   ```
 
-#### linux / MacOS
+#### Linux / MacOS
 
 - sudo pip3 install mcpi-e
 
@@ -163,7 +163,7 @@
 
 ## Learn Python With Minecraft
 
-### 1 [Understand the coordinates of minecraft](./documents/2_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md)
+### 1 [Understand the coordinates of minecraft](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
 
 Minecraft coordinates are different than what we learn from geomestry. You need keep the picture below in mind when you do the minecraft coding.
 ![coordinates of minecraft](./documents/minecraft_Coordinates.png)
@@ -189,13 +189,13 @@ pos=mc.player.getTilePos()
 
 ```
 
-#### - [[Mission-1.1] find your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-11-find-your-location)
+#### - [[Mission-1.1] Find your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-11-find-your-location)
 
-#### - [[Mission-1.2] find the block type id of the block you are standing](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-12-find-the-block-type-id-of-the-block-you-stand-on)
+#### - [[Mission-1.2] Find the block type id of the block you are standing](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-12-find-the-block-type-id-of-the-block-you-are-standing)
 
-#### - [[Mission-1.3] Teleport to an exact position](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-13-teleport-you-to-a-exactly-position)
+#### - [[Mission-1.3] Teleport to an exact position](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-13-teleport-to-an-exact-position)
 
-#### - [[Mission-1.4] Teleport player to a direction with 100 blocks](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
+#### - [[Mission-1.4] Teleport player to one direction with 100 blocks](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
 
 #### - [[Mission-1.5] Place a block on your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-15-place-a-block-on-your-location)
 
@@ -203,14 +203,14 @@ pos=mc.player.getTilePos()
 
 #### - [[Mission-2.1]Stack 5 blocks without loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-21stack-5-blocks-without-loop)
 
-#### - [[Mission-2.2] Stack 5 blocks using For loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-22-stack-5-blocks-using-for-loop)
+#### - [[Mission-2.2] Stack 5 blocks using `For` loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-22-stack-5-blocks-by-using-for-loop)
 
 
 #### - [[Mission-2.3] Build a 5X5 wall](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-23-build-a-5x5-wall)
 
 #### - [[Mission-2.4] Build a 5x5x5 Cube](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-24-build-a-5x5x5-cube)
 
-#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in minecraft](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
+#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in Minecraft](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
 
 ### 3 [Use Condition `if...else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md#3-use-condition-ifelse)
 
