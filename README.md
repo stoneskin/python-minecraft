@@ -184,30 +184,30 @@ mc = minecraft.Minecraft.create(address,4711,name)
 pos=mc.player.getTilePos()
 ```
 
-#### - [[Mission-1.1] find your location](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-11-find-your-location)
+#### - [[Mission-1.1] find your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-11-find-your-location)
 
-#### - [[Mission-1.2] find the block type id of the block you stand on](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-12-find-the-block-type-id-of-the-block-you-stand-on)
+#### - [[Mission-1.2] find the block type id of the block you stand on](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-12-find-the-block-type-id-of-the-block-you-stand-on)
 
-#### - [[Mission-1.3] Teleport you to a exactly position](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-13-teleport-you-to-a-exactly-position)
+#### - [[Mission-1.3] Teleport you to a exactly position](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-13-teleport-you-to-a-exactly-position)
 
-#### - [[Mission-1.4] Teleport you to one direction with 100 blocks](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
+#### - [[Mission-1.4] Teleport you to one direction with 100 blocks](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
 
-#### - [[Mission-1.5] Place a block on your location](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-15-place-a-block-on-your-location)
+#### - [[Mission-1.5] Place a block on your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-15-place-a-block-on-your-location)
 
-### 2 [Use `for` Loop to stack blocks](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#2-use-for-loop-to-stack-blocks)
+### 2 [Use `for` Loop to stack blocks](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
 
-#### - [[Mission-2.1]Stack 5 blocks without loop](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-21stack-5-blocks-without-loop)
+#### - [[Mission-2.1]Stack 5 blocks without loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-21stack-5-blocks-without-loop)
 
-#### - [[Mission-2.2] Stack 5 blocks using For loop](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-22-stack-5-blocks-using-for-loop)
+#### - [[Mission-2.2] Stack 5 blocks using For loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-22-stack-5-blocks-using-for-loop)
 
 
-#### - [[Mission-2.3] Build a 5X5 wall](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-23-build-a-5x5-wall)
+#### - [[Mission-2.3] Build a 5X5 wall](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-23-build-a-5x5-wall)
 
-#### - [[Mission-2.4] Build a 5x5x5 Cube](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--mission-24-build-a-5x5x5-cube)
+#### - [[Mission-2.4] Build a 5x5x5 Cube](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-24-build-a-5x5x5-cube)
 
-#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in minecraft](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
+#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in minecraft](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
 
-### 3 [Use Condition `if...else`](./documents/5_LearnPythonWithMineCraft/LearnPythonWithMineCraft.md#3-use-condition-ifelse)
+### 3 [Use Condition `if...else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md#3-use-condition-ifelse)
 
 todo
 
