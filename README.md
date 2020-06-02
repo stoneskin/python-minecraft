@@ -6,15 +6,27 @@
 
 ![alt python-minecraft](./documents/ProgrammingWithMineCraftPython.png)
 
-## Pre-Request
+## 0  Pre-Request
 
-### Setup mincraft server
+### 0.1 Install Minecraft Java edition
+
+Go to minecraft website download the Java Edition
+
+- [link to download Minecraft java edition](https://www.minecraft.net/en-us/download/)
+
+### 0.2 Setup mincraft server
 
 - **[How to setup a mincraft server (spigot)](./documents/1_SetUpMineCraftServer/1.1_HowToSetUpMineCraftServer.md)**
   
 - **[How to enable Python on the Minecraft server by installing the RaspberryJuice plugin](./documents/1_SetUpMineCraftServer/1.2_HowToEnablePythonForMineCraftServer.md)**
 
-### Install mcip Python module
+### 0.3 Install Python
+
+Go to Python download page, download and install **Python 3.8** and up
+
+- [Link to download ptyhon](https://www.python.org/downloads/)
+
+### 0.4 Install mcpi Python module
 
 #### Window
 
@@ -36,10 +48,11 @@
 
 - sudo pip3 install mcpi-e
 
-## Code Samples
+## 1. Get Start Python with Minecraft
 
-### 1. Connect to the Minecraft server and get your position
+### 1.1 Connect to the Minecraft server and get your position
 
+Create a Python project folder, Download and save the sample1.py file to  your python project folder
    >[sample1.py](./0.1-Sample1.py)
 
 ```python
@@ -55,9 +68,12 @@
    print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
 ```
 
-### 2. Frequently used `mcpi` commands
+Use your faverate python editor to open the sample1.py file.
+When you install python, it come with a python editor call IDLE.
 
-#### 2.1 Find your location
+### 1.2. Frequently used `mcpi` commands
+
+#### 1.2.1 Find your location
 
 > get the tile position
 
@@ -66,7 +82,7 @@
 
 ```
 
-#### 2.2 Teleport
+#### 1.2.2 Teleport
 
 > move player to north 100 block
 
@@ -75,7 +91,7 @@
    mc.player.setTilePos(x,y+100,z)
 ```
 
-#### 2.3 Set block
+#### 1.2.3 Set block
 
 >set the a stone block beside the player
 
@@ -102,7 +118,7 @@
    mc.setBlock(x+1, y, z+1, flower, flowerColor)
 ```
 
-#### 2.4 Get block
+#### 1.2.4 Get block
 
 >get the block type id of the player stepping on
 
@@ -114,7 +130,45 @@
       print("current block is Air")
 ```
 
-### 3 Dropping the flowers when you move
+## 2 Learn Python With Minecraft
+#### To use the code examples in this site, please make sure include the piece of code below before the sample codes
+
+```python
+import mcpi_e.minecraft as minecraft
+import mcpi_e.block as block
+from math import *
+
+address="127.0.0.1" # change to address of your minecraft server
+name ="change you your name"
+mc = minecraft.Minecraft.create(address,4711,name)
+pos=mc.player.getTilePos()
+
+#your other code below
+...
+
+```
+### 2.1 [Understand the coordinates of minecraft](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
+
+Minecraft coordinates are different than what we learn from geomestry. You need keep the picture below in mind when you do the minecraft coding.
+[![coordinates of minecraft](./documents/minecraft_Coordinates.png)](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
+
+For basic python syntax, pleas check [Python syntax](https://www.w3schools.com/python/python_syntax.asp) for details.
+
+The missions/codes below will use `print` and command from minecraft api `mcpi`
+
+[Click to Read Content](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
+
+### 2.2 [Use `for` Loop to stack blocks](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
+
+[Click to Read Content](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
+
+### 2.3 [Use Condition `if ... else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md)
+
+todo
+
+## 3 More Code Samples
+
+### 3.1 Dropping the flowers when you move
 
 - code example 1: [dropflower.py](./samples/dropflower.py)
 - code example 2 : [dropflower_Withsize.py](./samples/dropflower_withsize.py)
@@ -134,7 +188,7 @@
 
 ![alt python-minecraft](./documents/dropflowers.png)
 
-### 4 Build a rainbow in the minecraft
+### 3.2 Build a rainbow in the minecraft
 
 >code example: [rainbow.py](./samples/rainbow.py)
 >build a rainbow with colored wool on the player's location
@@ -160,59 +214,3 @@
 ```
 
 ![alt python-minecraft](./documents/rainbow.png)
-
-## Learn Python With Minecraft
-
-### 1 [Understand the coordinates of minecraft](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
-
-Minecraft coordinates are different than what we learn from geomestry. You need keep the picture below in mind when you do the minecraft coding.
-![coordinates of minecraft](./documents/minecraft_Coordinates.png)
-
-For basic python syntax, pleas check [Python syntax](https://www.w3schools.com/python/python_syntax.asp) for details.
-
-The missions/codes below will use `print` and command from minecraft api `mcpi`
-
-#### To use the code examples in this site, please make sure include the piece of code below before the sample codes
-
-```python
-import mcpi_e.minecraft as minecraft
-import mcpi_e.block as block
-from math import *
-
-address="127.0.0.1" # change to address of your minecraft server
-name ="change you your name"
-mc = minecraft.Minecraft.create(address,4711,name)
-pos=mc.player.getTilePos()
-
-#your other code below
-...
-
-```
-
-#### - [[Mission-1.1] Find your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-11-find-your-location)
-
-#### - [[Mission-1.2] Find the block type id of the block you are standing](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-12-find-the-block-type-id-of-the-block-you-are-standing)
-
-#### - [[Mission-1.3] Teleport to an exact position](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-13-teleport-to-an-exact-position)
-
-#### - [[Mission-1.4] Teleport player to one direction with 100 blocks](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-14-teleport-you-to-one-direction-with-100-blocks)
-
-#### - [[Mission-1.5] Place a block on your location](./documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md#--mission-15-place-a-block-on-your-location)
-
-### 2 [Use `for` Loop to stack blocks](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
-
-#### - [[Mission-2.1]Stack 5 blocks without loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-21stack-5-blocks-without-loop)
-
-#### - [[Mission-2.2] Stack 5 blocks using `For` loop](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-22-stack-5-blocks-by-using-for-loop)
-
-
-#### - [[Mission-2.3] Build a 5X5 wall](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-23-build-a-5x5-wall)
-
-#### - [[Mission-2.4] Build a 5x5x5 Cube](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--mission-24-build-a-5x5x5-cube)
-
-#### - [[Challenge] [Mission-2.5] Build a 10x10X10 pyramid in Minecraft](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#--challenge-mission-25-build-a-10x10x10-pyramid-in-minecraft)
-
-### 3 [Use Condition `if...else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md#3-use-condition-ifelse)
-
-todo
-
