@@ -6,6 +6,8 @@
 
 ![alt python-minecraft](./documents/ProgrammingWithMineCraftPython.png)
 
+------
+
 ## 0  Pre-Request
 
 ### 0.1 Install Minecraft Java edition
@@ -24,7 +26,8 @@ Go to minecraft website download the Java Edition
 
 Go to Python download page, download and install **Python 3.8** and up
 
-- [Link to download ptyhon](https://www.python.org/downloads/)
+- [To the page of download ptyhon](https://www.python.org/downloads/)
+- [How to Install Python](https://onedrive.live.com/?authkey=%21ABw%2DLzmG9zyRWFA&cid=61E2F373B0D0BEF9&id=61E2F373B0D0BEF9%2150723&parId=61E2F373B0D0BEF9%2150531&o=OneUp)
 
 ### 0.4 Install mcpi Python module
 
@@ -48,6 +51,23 @@ Go to Python download page, download and install **Python 3.8** and up
 
 - sudo pip3 install mcpi-e
 
+### 0.5 Install a Python Editor
+
+- Python IDLE
+  - [IDLD](https://en.wikipedia.org/wiki/IDLE) is commine with Python, Open it by in Start->Search, Input "IDLE"
+  - For how to [use IDLE](https://realpython.com/python-idle/)
+  
+- PyCharm
+  - **PyCharm Edu** is a python editor help you learn Python
+  - Click to download [pyCharm Edu](https://www.jetbrains.com/edu-products/download)
+
+- VsCode
+  - **VsCode** is a editor for many different programming langurage.
+  - Click to download [VsCode](https://code.visualstudio.com/)
+  - [How to install VsCode for python](https://onedrive.live.com/?authkey=%21ABw%2DLzmG9zyRWFA&cid=61E2F373B0D0BEF9&id=61E2F373B0D0BEF9%2150724&parId=61E2F373B0D0BEF9%2150531&o=OneUp)
+
+------
+
 ## 1. Get Start Python with Minecraft
 
 ### 1.1 Connect to the Minecraft server and get your position
@@ -56,16 +76,16 @@ Create a Python project folder, Download and save the sample1.py file to  your p
    >[sample1.py](./0.1-Sample1.py)
 
 ```python
-   from mcpi_e.minecraft import Minecraft
+from mcpi_e.minecraft import Minecraft
 
-   serverAddress="127.0.0.1" # change to your minecraft server
-   pythonApiPort=4711 #default port for RaspberryJuice plugin is 4711, it could be changed in plugins\RaspberryJuice\config.yml
-   playerName="stoneskin" # change to your username
+serverAddress="127.0.0.1" # change to your minecraft server
+pythonApiPort=4711 #default port for RaspberryJuice plugin is 4711, it could be changed in plugins\RaspberryJuice\config.yml
+playerName="stoneskin" # change to your username
 
-   mc = Minecraft.create(serverAddress,pythonApiPort,playerName)
-   pos = mc.player.getPos()
+mc = Minecraft.create(serverAddress,pythonApiPort,playerName)
+pos = mc.player.getPos()
 
-   print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
+print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
 ```
 
 Use your faverate python editor to open the sample1.py file.
@@ -78,7 +98,7 @@ When you install python, it come with a python editor call IDLE.
 > get the tile position
 
 ```python
-   pos = mc.player.getTilePos()
+pos = mc.player.getTilePos()
 
 ```
 
@@ -87,8 +107,8 @@ When you install python, it come with a python editor call IDLE.
 > move player to north 100 block
 
 ```python
-   x,y,z = pos = mc.player.getTilePos()
-   mc.player.setTilePos(x,y+100,z)
+x,y,z = pos = mc.player.getTilePos()
+mc.player.setTilePos(x,y+100,z)
 ```
 
 #### 1.2.3 Set block
@@ -96,26 +116,26 @@ When you install python, it come with a python editor call IDLE.
 >set the a stone block beside the player
 
 ```python
-   x,y,z = pos = mc.player.getTilePos()
-   mc.setBlock(x+1, y, z, 1)
+x,y,z = pos = mc.player.getTilePos()
+mc.setBlock(x+1, y, z, 1)
 ```
 
 >setblock with constants block.STONE.id
 
 ```python
-   #setblock with constants block.STONE.id
-   from mcpi_e import block
-   (x,y,z) = pos = mc.player.getTilePos()
-   mc.setBlock(x+1, y, z+1, block.STONE.id)
+#setblock with constants block.STONE.id
+from mcpi_e import block
+(x,y,z) = pos = mc.player.getTilePos()
+mc.setBlock(x+1, y, z+1, block.STONE.id)
 ```
 
 >set special block which extra properties
 
 ```python
-   # set special block which extra properties
-   flower = 38
-   flowerColor = 3
-   mc.setBlock(x+1, y, z+1, flower, flowerColor)
+# set special block which extra properties
+flower = 38
+flowerColor = 3
+mc.setBlock(x+1, y, z+1, flower, flowerColor)
 ```
 
 #### 1.2.4 Get block
@@ -123,14 +143,17 @@ When you install python, it come with a python editor call IDLE.
 >get the block type id of the player stepping on
 
 ```python
-   # get the block current player step on
-   x, y, z = mc.player.getTilePos()
-   blockId= mc.getBlock(x, y, z)
-   if(blockId == 0):
-      print("current block is Air")
+# get the block current player step on
+x, y, z = mc.player.getTilePos()
+blockId= mc.getBlock(x, y, z)
+if(blockId == 0):
+   print("current block is Air")
 ```
 
+------
+
 ## 2 Learn Python With Minecraft
+
 #### To use the code examples in this site, please make sure include the piece of code below before the sample codes
 
 ```python
@@ -147,6 +170,7 @@ pos=mc.player.getTilePos()
 ...
 
 ```
+
 ### 2.1 [Understand the coordinates of minecraft](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
 
 Minecraft coordinates are different than what we learn from geomestry. You need keep the picture below in mind when you do the minecraft coding.
@@ -156,15 +180,26 @@ For basic python syntax, pleas check [Python syntax](https://www.w3schools.com/p
 
 The missions/codes below will use `print` and command from minecraft api `mcpi`
 
-[Click to Read Content](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
+#### [![clickme](./documents/clickMe.png) Click to view your Mincraft-Python Missions-1](./document/../documents/2_LearnPythonWithMineCraft/2.1_Understand_the_coordinates_of_minecraft.md)
 
 ### 2.2 [Use `for` Loop to stack blocks](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
 
-[Click to Read Content](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
+`for loops` are traditionally used when you have a block of code  which you wnat to repeat number of times.
+```
+for x in range(0, 3):
+    print("We're on time %d" % (x))
+```
+For learnning how to use `for` loop, please visit [Python For Loops](https://wiki.python.org/moin/ForLoop)
+
+Below mission only need using `for ... range` loop.
+
+#### [![clickme](./documents/clickMe.png)Click to view your Coding Missions -2](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
 
 ### 2.3 [Use Condition `if ... else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md)
 
 todo
+
+------
 
 ## 3 More Code Samples
 
