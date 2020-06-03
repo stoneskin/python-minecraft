@@ -150,6 +150,8 @@ if(blockId == 0):
    print("current block is Air")
 ```
 
+#####[![heart](./documents/heart.png) Check the Minecraft Item ID list](https://minecraft-ids.grahamedgecombe.com/)
+
 ------
 
 ## 2 Learn Python With Minecraft
