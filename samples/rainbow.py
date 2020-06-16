@@ -9,9 +9,10 @@ from math import *
 address="127.0.0.1" # change to your minecraft server
 name ="you username"
 
-colors = [14, 1, 4, 5, 3, 11, 10]
+mc = minecraft.Minecraft.create(address,4712,name)
 
-mc = minecraft.Minecraft.create(address,4711,name)
+
+colors = [14, 1, 4, 5, 3, 11, 10]
 
 playerPos=mc.player.getTilePos()
 height=50
