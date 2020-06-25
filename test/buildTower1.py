@@ -1,6 +1,6 @@
 from mcpi_e.minecraft import Minecraft
 from mcpi_e import block
-serverAddress="localhost" # change to your minecraft server
+serverAddress="192.168.1.155" # change to your minecraft server
 playerName ="stoneskin2020"
 pythonApiPort=4711
 
@@ -17,6 +17,7 @@ def SetTower(p,id):
 
 pos=mc.player.getTilePos()   
 
-SetTower(pos,block.SAND.id)              
+SetTower(pos,block.IRON_ORE.id)              
+
 
      
