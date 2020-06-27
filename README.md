@@ -89,7 +89,7 @@ print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
 ```
 
 Use your faverate python editor to open the sample1.py file.
-When you install python, it come with a python editor call IDLE.
+When you install python, it come with a python editor call IDLE.j
 
 ### 1.2. Frequently used `mcpi` commands
 
