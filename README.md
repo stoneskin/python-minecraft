@@ -245,6 +245,8 @@ Booleans represent one of two values: `True` or `False`
 
 For learn more and practic Boolean, please check [Python Boolean](https://www.w3schools.com/python/python_booleans.asp)
 
+![condition](https://stoneskin.github.io/SummerCamp_Python_Minecraft/comparators.jpg)
+
 #### [![clickme](./documents/clickMe.png)Click to view your Coding Missions -4](./documents/2_LearnPythonWithMineCraft/2.4_Use_condition_minecraft_to_find_block.m)
 
 ------
