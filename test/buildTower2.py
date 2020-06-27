@@ -1,9 +1,9 @@
 from mcpi_e.minecraft import Minecraft
 from mcpi_e import block
 from mcpi_e.vec3 import Vec3
-serverAddress="192.168.1.155" # change to your minecraft server
+serverAddress="127.0.0.1" # change to your minecraft server
 playerName ="stoneskin2020"
-pythonApiPort=4712
+pythonApiPort=4711
 
 mc=Minecraft.create(serverAddress,pythonApiPort,playerName) 
 

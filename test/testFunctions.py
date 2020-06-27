@@ -144,11 +144,24 @@ pos=mc.player.getTilePos()
 #carrots:141
 #Potatoes:142
 #wheat: 59
-BuildFarmland(pos,59) 
+#BuildFarmland(pos,59) 
 
+def Replace(p,width,length,id=9,newId=0):
+    fId=id;
+    print("p",p)      
+    for w in range (1-width,width):
+        print("w=",w)
+        for l in range (1-length,length):
+            x=p.x+w    
+            y=p.y
+            z=p.z+l
+            cid=mc.getBlock(x,y,z);
+            if(cid==9 or cid==8):
+                mc.setBlock(x,y,z,newId)
 
-
-#FillEmpty(pos,1,10)
+#FillEmpty(pos,9,100)
+mc.settings.SYS_SPEED=mc.settings.Speed.FASTEST
+Replace(pos,100,100)
 #BuildBridge(Vec3(pos.x,pos.y+1,pos.z),Vec3(pos.x-10,pos.y+1,pos.z),66)
 
 #pos2=Vec3(pos.x,pos.y,pos.z+400)

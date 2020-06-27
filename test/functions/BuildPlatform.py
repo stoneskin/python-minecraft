@@ -6,11 +6,12 @@ import random
 def BuildPlatform(mc,p,width,length,id=0,typeid=0):
     print("BuildPlatform",p,width,length,id,typeid)    
     for w in range (1-width,width):
-        print("w=",w)
+        print("w=",w,"id=",id)
         for l in range (1-length,length):
             x=p[0]+w
             y=p[1]
-            z=p[2]+l         
+            z=p[2]+l
+            print("setblock",x,y,z)         
             mc.setBlock(x,y,z,id,typeid)
             
 
