@@ -235,14 +235,17 @@ value=103
 print("Watermelon block id is "+str(value))
 ```
 
+#### [![clickme](./documents/clickMe.png)Click to view your Coding Missions -3](./documents/2_LearnPythonWithMineCraft/2.3_ValueType_string_number.md)
+
 ### 2.4 [Use Condition `if ... else`](./documents/2_LearnPythonWithMineCraft/2.4_Use_condition_minecraft_to_find_block.md)
 
 To learn comdition please check [Python If...Else](https://www.w3schools.com/python/python_conditions.asp)
 
-
 Booleans represent one of two values: `True` or `False`
 
 For learn more and practic Boolean, please check [Python Boolean](https://www.w3schools.com/python/python_booleans.asp)
+
+#### [![clickme](./documents/clickMe.png)Click to view your Coding Missions -4](./documents/2_LearnPythonWithMineCraft/2.4_Use_condition_minecraft_to_find_block.m)
 
 ------
 
@@ -292,5 +295,7 @@ For learn more and practic Boolean, please check [Python Boolean](https://www.w3
    print("rainbow created at x:{} y:{} z:{}".format(playerPos.x,playerPos.y,playerPos.z))
 
 ```
+
+
 
 ![alt python-minecraft](./documents/rainbow.png)
