@@ -197,9 +197,52 @@ Below mission only need using `for ... range` loop.
 
 #### [![clickme](./documents/clickMe.png)Click to view your Coding Missions -2](./documents/2_LearnPythonWithMineCraft/2.2_Use_for_loop_to_stack_blocks.md#2-use-for-loop-to-stack-blocks)
 
-### 2.3 [Use Condition `if ... else`](./documents/2_LearnPythonWithMineCraft/2.3_Use_condition_minecraft_to_find_block.md)
+### 2.3 [Value Type: String , Number](./documents/2_LearnPythonWithMineCraft/2.3_ValueType_string_number.md)
 
-todo
+In Python any amount of text call a `string`, you could use string like this
+
+```python
+print("Hello Minecraft")
+
+name ="Steve the Miner"
+
+print(name)
+```
+String and Intiger is different DataType, for detail please read [Python Data Types](https://www.w3schools.com/python/python_datatypes.asp).
+Below is the Data Types we possible will used in our class
+
+![datatypes](https://stoneskin.github.io/SummerCamp_Python_Minecraft/datatypes.jpg)
+
+example of get type of a variable:
+
+```python
+x = 5
+print(type(x))
+```
+
+The data you got form input is a string, we need convert to number before using as number. `int(str)` could do this job.
+
+```python
+blockType=input("Enter a block type:")
+blockTypeId=int(blockType)
+
+```
+
+other way if you want change a int to string, you could use `str(number)`
+
+```python
+value=103
+print("Watermelon block id is "+str(value))
+```
+
+### 2.4 [Use Condition `if ... else`](./documents/2_LearnPythonWithMineCraft/2.4_Use_condition_minecraft_to_find_block.md)
+
+To learn comdition please check [Python If...Else](https://www.w3schools.com/python/python_conditions.asp)
+
+
+Booleans represent one of two values: `True` or `False`
+
+For learn more and practic Boolean, please check [Python Boolean](https://www.w3schools.com/python/python_booleans.asp)
 
 ------
 
